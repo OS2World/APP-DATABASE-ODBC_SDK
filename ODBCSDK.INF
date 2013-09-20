@@ -1,0 +1,84 @@
+[Source Media Descriptions]
+	"1", "Disk1", "ODBC.DLL", "."
+	"2", "Disk2", "DRVSETUP.C", "."
+
+[Binaries]
+	1, ODBCADM.exe,,,, 1995-08-14,,,, !READONLY,,,,,, 22574,,,,,
+
+[Includes]
+	1, odbcinst.h,,,, 1994-08-14,,,, !READONLY,,,,,, 6328,,,,,
+	1, sql.h,,,, 1994-08-14,,,, !READONLY,,,,,, 48017,,,,,
+	1, sqlext.h,,,, 1994-08-14,,,, !READONLY,,,,,, 9635,,,,,
+	1, sqltypes.h,,,, 1994-08-14,,,, !READONLY,,,,,, 3892,,,,,
+	1, win2os2.h,,,, 1994-08-14,,,, !READONLY,,,,,, 3892,,,,,
+	1, os2funcs.h,,,, 1994-08-14,,,, !READONLY,,,,,, 3892,,,,,
+	1, odbcver.h,,,, 1994-08-14,,,, !READONLY,,,,,, 3892,,,,,
+
+[Libraries]
+	1, odbc.lib,,,, 1994-08-14,,,, !READONLY,,,,,, 5120,,,,,
+	1, odbccp.lib,,,, 1994-08-14,,,, !READONLY,,,,,, 3584,,,,,
+	1, odbccr.lib,,,, 1994-08-14,,,, !READONLY,,,,,, 2560,,,,,
+	1, os2util.lib,,,, 1994-08-14,,,, !READONLY,,,,,, 6144,,,,,
+
+[Dlls]
+	1, odbccr.dll,,,, 1994-08-14,,,, !READONLY,,,,,, 169387,,,,,
+	1, odbccp.dll,,,, 1994-08-14,,,, !READONLY,,,,,, 151252,,,,,
+	1, odbcint.dll,,,, 1994-08-14,,,, !READONLY,,,,,, 22095,,,,,
+	1, os2util.dll,,,, 1994-08-14,,,, !READONLY,,,,,, 65689,,,,,
+	1, odbc.dll,,,, 1994-08-14,,,, !READONLY,,,,,, 140302,,,,,
+
+[drvsetup]
+	2, drvsetup.c,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, drvsetup.rc,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, drvsetup.h,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, drvsetup.ico,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, drvsetup.bmp,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, splshos2.bmp,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, drvsetup.dlg,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, setup.def,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, regist.h,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, regist.c,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, drvsetup.mak,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, odbc.inf,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+
+[smpldvr]
+	2, catalog.c,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, connect.c,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, dll.c,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, dummy.c,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, execute.c,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, info.c,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, options.c,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, prepare.c,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, results.c,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, sample.def,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, sample.h,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, sample.rc,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, setup.c,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, smpldvr.mak,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, transact.c,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+
+[quicktes]
+	2, autotest.h,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, build2.cmd,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, buildos2.cmd,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, custom.c,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, custom.h,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, custom.rc,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, dllstub.c,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, quicktes.mak,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, quiktest.c,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+
+[progref]
+	2, adhoc.c,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, error.c,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, progref.mak,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+	2, static.c,,,, 1994-08-14,,,, !READONLY,,,,,, 1000,,,,,
+
+[ReDist]
+	1, ODBCADM.exe,,,, 1995-08-14,,,, !READONLY,,,,,, 22574,,,,,
+	1, odbccr.dll,,,, 1994-08-14,,,, !READONLY,,,,,, 169387,,,,,
+	1, odbccp.dll,,,, 1994-08-14,,,, !READONLY,,,,,, 151252,,,,,
+	1, odbcint.dll,,,, 1994-08-14,,,, !READONLY,,,,,, 22095,,,,,
+	1, os2util.dll,,,, 1994-08-14,,,, !READONLY,,,,,, 65689,,,,,
+	1, odbc.dll,,,, 1994-08-14,,,, !READONLY,,,,,, 140302,,,,,

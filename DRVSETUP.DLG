@@ -1,0 +1,196 @@
+#define WS_POPUP	0
+#define WS_VSCROLL	0
+#define LBS_SORT	0
+#define CBS_SORT	0
+#define	ES_OEMCONVERT	0
+#define	LBS_HASSTRINGS	0
+#define	CBS_HASSTRINGS	0
+#define	LBS_DISABLENOSCROLL	0
+#define  SS_NOPREFIX	0
+#define	CBS_OWNERDRAWFIXED	0
+#define	WS_BORDER	0
+#define	NOT_VISIBLE	0
+#define	NOT_WS_GROUP	0
+#define	WS_CHILD	0
+#define	ES_UPPERCASE	0
+#undef FS_SYSMODAL
+#define FS_SYSMODAL	0
+
+     /**************************************************************
+     COPYRIGHT © 1990-94, VISIGENIC SOFTWARE, INC., 
+     *************************************************************/
+     
+DLGTEMPLATE WELCOME MOVEABLE LOADONCALL DISCARDABLE
+BEGIN
+    DIALOG   "Visigenic Software ODBC Setup" , WELCOME , 36, 33, 200, 115 ,  FS_SYSMODAL | WS_POPUP | WS_VISIBLE | ,FCF_TITLEBAR | FCF_SYSMENU
+		PRESPARAMS PP_FONTNAMESIZE, "10.System"
+     BEGIN
+         DEFPUSHBUTTON   "~Continue",DID_OK,52,6,40,14,WS_GROUP
+         PUSHBUTTON      "E~xit",DID_CANCEL,108,6,40,14
+         CTEXT           "Welcome to the Visigenic Software Open Database Connectivity (ODBC) Setup utility.",
+     		    -1,45,80,140,25,SS_NOPREFIX | DT_WORDBREAK
+         CTEXT           "Setup installs and configures Visigenic Software Open Database Connectivity components.  Choose Continue to install or Exit to leave without installing Visigenic Software ODBC.",
+     		    -1,10,30,180,45,NOT_WS_GROUP | DT_WORDBREAK
+         ICON            IDI_ICON,-1,8,77,18,20
+    END
+END
+     
+DLGTEMPLATE ASKQUIT MOVEABLE LOADONCALL DISCARDABLE
+BEGIN
+    DIALOG   "Visigenic Software ODBC Setup" , ASKQUIT , 34, 44, 200, 90 ,  FS_SYSMODAL | WS_POPUP | WS_VISIBLE | ,FCF_TITLEBAR | FCF_SYSMENU
+		PRESPARAMS PP_FONTNAMESIZE, "10.System"
+     BEGIN
+         DEFPUSHBUTTON   "~Back",DID_OK,52,6,40,14,WS_GROUP
+         PUSHBUTTON      "E~xit",IDX,108,6,40,14
+         LTEXT           "The setup process is not complete.  If you exit now, Visigenic Software ODBC will not be installed.",
+     		    -1,45,50,150,30,SS_NOPREFIX | DT_WORDBREAK
+         CTEXT           "If you exit, you will need to rerun setup to install Visigenic Software ODBC.",
+     		    -1,10,30,180,20,NOT_WS_GROUP | DT_WORDBREAK
+         ICON            IDI_ICON,-1,8,62,18,20
+    END
+END
+     
+DLGTEMPLATE EXITSUCCESS MOVEABLE LOADONCALL DISCARDABLE
+BEGIN
+    DIALOG   "Visigenic Software ODBC Setup" , EXITSUCCESS , 27, 34, 200, 90 ,  FS_SYSMODAL | WS_POPUP | WS_VISIBLE | ,FCF_TITLEBAR | FCF_SYSMENU
+		PRESPARAMS PP_FONTNAMESIZE, "10.System"
+     BEGIN
+         DEFPUSHBUTTON   "OK",DID_OK,80,06,40,14
+         CTEXT           "Visigenic Software ODBC has been successfully installed.",-1,10, 40,180,16,SS_NOPREFIX | DT_WORDBREAK
+         ICON            IDI_ICON,-1,8,62,18,20
+         LTEXT           "Setup Succeeded!",-1,45,67,118,8
+    END
+END
+     
+DLGTEMPLATE EXITQUIT MOVEABLE LOADONCALL DISCARDABLE
+BEGIN
+    DIALOG   "Visigenic Software ODBC Setup" , EXITQUIT , 33, 35, 200, 90 ,  FS_SYSMODAL | WS_POPUP | WS_VISIBLE | ,FCF_TITLEBAR | FCF_SYSMENU
+		PRESPARAMS PP_FONTNAMESIZE, "10.System"
+     BEGIN
+         DEFPUSHBUTTON   "OK",DID_OK,80,06,40,14
+         CTEXT           "Run setup again to install Visigenic Software ODBC.",-1,10,44,
+     		    180,16,SS_NOPREFIX | DT_WORDBREAK
+         LTEXT           "Visigenic Software ODBC has not been installed.",-1,45,65,150,20,
+     		    SS_NOPREFIX | NOT_WS_GROUP | DT_WORDBREAK
+         ICON            IDI_ICON,-1,8,62,18,20
+    END
+END
+     
+DLGTEMPLATE EXITFAILURE MOVEABLE LOADONCALL DISCARDABLE
+BEGIN
+    DIALOG   "Visigenic Software ODBC Setup" , EXITFAILURE , 26, 25, 200, 90 ,  FS_SYSMODAL | WS_POPUP | WS_VISIBLE | ,FCF_TITLEBAR | FCF_SYSMENU
+		PRESPARAMS PP_FONTNAMESIZE, "10.System"
+     BEGIN
+         DEFPUSHBUTTON   "OK",DID_OK,80,06,40,14
+         CTEXT           "Please correct the problem and rerun setup to install Visigenic Software ODBC.",
+     		    -1,10,30,180,20,SS_NOPREFIX | DT_WORDBREAK
+         LTEXT           "Visigenic Software ODBC could not be installed.",-1,45,59,150,16,
+     		    SS_NOPREFIX | NOT_WS_GROUP | DT_WORDBREAK
+         ICON            IDI_ICON,-1,8,62,18,20
+    END
+END
+     
+DLGTEMPLATE AWELCOME MOVEABLE LOADONCALL DISCARDABLE
+BEGIN
+    DIALOG   "Visigenic Software ODBC Setup" , AWELCOME , 36, 33, 201, 75 ,  FS_SYSMODAL | WS_POPUP | WS_VISIBLE | ,FCF_TITLEBAR
+		PRESPARAMS PP_FONTNAMESIZE, "10.System"
+     BEGIN
+         CTEXT           "Welcome to the Visigenic Software Open Database Connectivity (ODBC) Setup utility.",
+     		    -1,45,40,140,25,SS_NOPREFIX | DT_WORDBREAK
+         CTEXT           "Please wait while setup installs and configures the Visigenic Software Open Database components.",
+     		    -1,10,05,180,30,NOT_WS_GROUP | DT_WORDBREAK
+         ICON            IDI_ICON,-1,8,47,18,20
+    END
+END
+     
+DLGTEMPLATE AEXITSUCCESS MOVEABLE LOADONCALL DISCARDABLE
+BEGIN
+    DIALOG   "Visigenic Software ODBC Setup" , AEXITSUCCESS , 27, 34, 201, 75 ,  FS_SYSMODAL | WS_POPUP | WS_VISIBLE | ,FCF_TITLEBAR
+		PRESPARAMS PP_FONTNAMESIZE, "10.System"
+     BEGIN
+         CTEXT           "Visigenic Software ODBC has been successfully installed.",-1,10,
+     		    19,180,16,SS_NOPREFIX | DT_WORDBREAK
+         ICON            IDI_ICON,-1,8,47,18,20
+         LTEXT           "Setup Succeeded!",-1,45,52,118,8
+    END
+END
+     
+DLGTEMPLATE AEXITFAILURE MOVEABLE LOADONCALL DISCARDABLE
+BEGIN
+    DIALOG   "Visigenic Software ODBC Setup" , AEXITFAILURE , 26, 25, 200, 90 ,  FS_SYSMODAL | WS_POPUP | WS_VISIBLE | ,FCF_TITLEBAR
+		PRESPARAMS PP_FONTNAMESIZE, "10.System"
+     BEGIN
+         DEFPUSHBUTTON   "OK",DID_OK,80,06,40,14
+         CTEXT           "Please correct the problem and rerun setup to install Visigenic Software ODBC.",
+     		    -1,10,30,180,20,SS_NOPREFIX | DT_WORDBREAK
+         LTEXT           "Visigenic Software ODBC could not be installed.",-1,45,59,150,16,
+     		    SS_NOPREFIX | NOT_WS_GROUP | DT_WORDBREAK
+         ICON            IDI_ICON,-1,8,62,18,20
+    END
+END
+     
+DLGTEMPLATE GETREGINFO MOVEABLE LOADONCALL DISCARDABLE
+BEGIN
+    DIALOG   "Visigenic Software Registration" , GETREGINFO , 78, 88, 219, 142 ,  FS_SYSMODAL | WS_POPUP | WS_CLIPSIBLINGS | ,FCF_TITLEBAR | FCF_SYSMENU
+		PRESPARAMS PP_FONTNAMESIZE, "10.System"
+     BEGIN
+         LTEXT           "Name:", -1, 7, 103, 57, 8
+         EDITTEXT        "",ID_GETREGINFO_NAME, 7, 87, 149, 13,  WS_GROUP | WS_TABSTOP
+         LTEXT           "Company:", -1, 7, 76, 75, 9
+         EDITTEXT        "",ID_GETREGINFO_CO, 7, 61, 149, 13,  WS_GROUP | WS_TABSTOP
+         LTEXT           "Serial Number:", -1, 7, 49, 61, 8
+         EDITTEXT        "",ID_GETREGINFO_SERNUM, 7, 32, 150, 14, ES_AUTOSCROLL | WS_GROUP | WS_TABSTOP
+         DEFPUSHBUTTON      " Continue ", DID_OK, 161, 10, 47, 14, WS_GROUP | WS_TABSTOP
+         LTEXT           "Please register your name, company and serial number before continuing:",
+                         -1, 7, 114, 148, 23, SS_NOPREFIX | DT_WORDBREAK
+    END
+END
+     
+DLGTEMPLATE REGINFO_CONFIRM MOVEABLE LOADONCALL DISCARDABLE
+BEGIN
+    DIALOG   "Registration Confirmation" , REGINFO_CONFIRM , 40, 97, 225, 128 ,  FS_SYSMODAL | WS_POPUP | ,FCF_TITLEBAR | FCF_SYSMENU
+		PRESPARAMS PP_FONTNAMESIZE, "10.System"
+     BEGIN
+         LTEXT           "You have provided the following registration information.",
+                         -1, 18, 108, 191, 16 , DT_WORDBREAK
+         LTEXT           "Name:", -1, 30, 92, 45, 8
+         LTEXT           "Company:", -1, 30, 75, 53, 8
+         LTEXT           "Serial Number:", -1, 30, 57, 80, 8
+         LTEXT           "", ID_GETREGINFO_NAME, 98, 92, 105, 8
+         LTEXT           "", ID_GETREGINFO_CO, 98, 75, 119, 8
+         LTEXT           "", ID_GETREGINFO_SERNUM, 99, 57, 115, 8
+         LTEXT           "Is this registration information correct?", -1, 19,
+                         37, 168, 8
+         DEFPUSHBUTTON      "~Yes", IDYES, 58, 12, 40, 14
+         PUSHBUTTON      "~No", IDNO, 125, 11, 40, 14
+    END
+END
+     
+DLGTEMPLATE REGINFO_INVALID MOVEABLE LOADONCALL DISCARDABLE
+BEGIN
+    DIALOG   "Registration Error" , REGINFO_INVALID , 26, 25, 200, 90 ,  FS_SYSMODAL | WS_POPUP | WS_VISIBLE | ,FCF_TITLEBAR
+		PRESPARAMS PP_FONTNAMESIZE, "10.System"
+     BEGIN
+         DEFPUSHBUTTON   "OK",DID_OK,80,06,40,14
+         CTEXT           "The Serial Number you provided is invalid.",
+     		    -1,10,30,180,20,SS_NOPREFIX
+         LTEXT           "Please try again.",-1,45,59,150,16,
+     		    SS_NOPREFIX | NOT_WS_GROUP
+         ICON            IDI_ICON,-1,8,62,18,20
+    END
+END
+     
+DLGTEMPLATE STAMP_FAILED MOVEABLE LOADONCALL DISCARDABLE
+BEGIN
+    DIALOG   "Licensing Error" , STAMP_FAILED , 26, 25, 200, 100 ,  FS_SYSMODAL | WS_POPUP | WS_VISIBLE | ,FCF_TITLEBAR
+		PRESPARAMS PP_FONTNAMESIZE, "10.System"
+     BEGIN
+         DEFPUSHBUTTON   "OK",DID_OK,80,06,40,14
+         CTEXT           "A file or files are damaged, such that they cannot be properly licensed.  Please restart the installation procedure or consult your software dealer",
+                         -1,10,30,180,30,SS_NOPREFIX | DT_WORDBREAK
+         LTEXT           "Driver Set Installation failed.",-1,45,69,150,16,
+     		    SS_NOPREFIX | NOT_WS_GROUP
+         ICON            IDI_ICON,-1,8,72,18,20
+    END
+END
+     

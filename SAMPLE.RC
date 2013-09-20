@@ -1,0 +1,88 @@
+/*
+** SAMPLE.RC - This is the ODBC sample driver resource file.
+**
+**	This code is furnished on an as-is basis as part of the ODBC SDK and is
+**	intended for example purposes only.
+**
+*/
+
+#include "sample.h"
+
+
+DLGTEMPLATE EDRIVERCONNECT LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Connect...", EDRIVERCONNECT, 92, 33, 108, 66, WS_VISIBLE, 
+            FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        LISTBOX         ID_LISTBOX, 6, 21, 97, 35, WS_GROUP
+        LTEXT           "Connect to:", -1, 5, 55, 49, 8
+        DEFPUSHBUTTON   "~OK", DID_OK, 6, 3, 46, 14
+        PUSHBUTTON      "Cancel", DID_CANCEL, 55, 3, 48, 14
+    END
+END
+
+DLGTEMPLATE CONFIGDSN LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Microsoft ODBC Sample Setup", CONFIGDSN, 12, 2, 261, 123, 
+            WS_VISIBLE, FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        CTEXT           "Change data source name, description, or options.  "
+                        "Then choose OK.", -1, 17, 100, 214, 20, 
+                        DT_WORDBREAK
+        LTEXT           "Data Source Name:", IDC_DSNAMETEXT, 5, 89, 80, 8
+        LTEXT           "Description:", -1, 34, 79, 52, 8
+        ENTRYFIELD      "", IDC_DSNAME, 89, 90, 164, 8, ES_MARGIN
+        ENTRYFIELD      "", IDC_DESC, 89, 79, 164, 8, ES_MARGIN
+        AUTOCHECKBOX    "Sample Option One", IDC_OPTION1, 87, 64, 93, 10
+        AUTOCHECKBOX    "Sample Option Two", IDC_OPTION2, 87, 56, 93, 10
+        GROUPBOX        "Translator", -1, 6, 25, 249, 29
+        PUSHBUTTON      "~Select...", IDC_SELECT, 197, 30, 48, 14
+        DEFPUSHBUTTON   "~OK", DID_OK, 73, 3, 40, 14
+        PUSHBUTTON      "Cancel", DID_CANCEL, 147, 3, 40, 14
+    END
+END
+//#include "os2sampl.dlg"
+
+
+// Version -----------------------------------------------------------------
+#include  <odbcver.h>
+
+#define USENGLISH_ANSI  "040904E4"        // String of 0x0409 and 1252
+
+#define VER_COMPANYNAME_STR     "Microsoft Corporation\0"
+#define VER_LEGALTRADEMARKS_STR "ODBC(TM) is a trademark of Microsoft Corporation.  Microsoft\256 is a registered trademark of Microsoft Corporation. Windows(TM) is a trademark of Microsoft Corporation.\0"
+#define VER_PRODUCTNAME_STR     "Microsoft Open Database Connectivity\0"
+#define VER_FILEDESC_STR        "Microsoft Sample ODBC Driver\0"
+#define VER_FILENAME_STR        "SAMPLE.DLL\0"
+#define VER_NAME_STR            "SAMPLE\0"
+
+//VS_VERSION_INFO VERSIONINFO
+//FILEVERSION     VER_FILEVERSION
+//PRODUCTVERSION  VER_PRODUCTVERSION
+//FILEFLAGSMASK   VER_FILEFLAGSMASK
+//FILEFLAGS       VER_FILEFLAGS
+//FILEOS          VER_FILEOS
+//FILETYPE        VFT_DLL
+//FILESUBTYPE     VFT2_UNKNOWN
+//BEGIN
+  //BLOCK "StringFileInfo"
+  //BEGIN
+    //BLOCK USENGLISH_ANSI
+    //BEGIN
+	  //VALUE "CompanyName",		VER_COMPANYNAME_STR
+      //VALUE "FileDescription",  VER_FILEDESC_STR
+      //VALUE "FileVersion",      VER_FILEVERSION_STR
+      //VALUE "InternalName",     VER_NAME_STR
+      //VALUE "LegalTrademarks",  VER_LEGALTRADEMARKS_STR
+      //VALUE "OriginalFilename", VER_FILENAME_STR
+      //VALUE "ProductName",      VER_PRODUCTNAME_STR
+      //VALUE "ProductVersion",   VER_PRODUCTVERSION_STR
+    //END
+  //END
+
+  //BLOCK "VarFileInfo"
+  //BEGIN
+    //VALUE "Translation",  0x0409, 1252
+  //END
+//END
+

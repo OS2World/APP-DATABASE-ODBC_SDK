@@ -1,0 +1,26 @@
+This contains instructions for registering the DB2 ODBC Driver under
+the Visigenic OS/2 ODBC Driver Manager. You must first have installed
+CAE/2, which is the OS/2 client that comes with DB2/2 V2.1. Also, you
+must have installed the ODBC SDK for OS/2 from Visigenic Software.
+
+Next,
+1. Rename/Backup the following files currently in the %DB2PATH%
+   directory where you installed CAE/2 (the following assumes
+   SQLLIB is the DB2 CAE/2 install directory):
+   a. DB2ODBC.EXE in SQLLIB\BIN
+   b. DB2ODBC.DLL in SQLLIB\DLL
+   c. DB2CLI.MO and DB2CLIH.MO in SQLLIB\MSG\PRIME
+
+2. Copy the files from the %ODBC_PATH%\DB2DRV directory in the following
+   manner (again assuming that SQLLIB is your CAE/2 install directory):
+   a. Copy DB2ODBC.EXE to SQLLIB\BIN
+   b. Copy DB2ODBC.DLL to SQLLIB\DLL
+   c. DB2CLI.MO and DB2CLIH.MO in SQLLIB\MSG\PRIME
+
+3. Run the DB2ODBC.EXE that you just copied into SQLLIB\BIN to register
+   the DB2 ODBC Driver under the Visigenic OS/2 ODBC Driver Manager. If
+   this is successful, you will see the message:
+   CLI0178I  The DB2 ODBC Driver has been successfully registered.
+
+4. Now you can use the Visigenic ODBC Administrator tool (ODBCADM.EXE)
+   to add your DB2 data sources.

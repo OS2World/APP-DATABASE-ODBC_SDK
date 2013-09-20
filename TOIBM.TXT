@@ -1,0 +1,4 @@
+Here are the instructions for placing the ODBC files on the CD.  Create a 
+directory on the CD named ODBC.  Copy the contents of the root directories
+of disk1 and disk2 to this directory.  Create a subdirectory under ODBC named
+DB2DRV.  Copy the contents of the DB2DRV directory on disk2 to this directory.

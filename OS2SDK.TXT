@@ -1,0 +1,480 @@
+Chapter 1:  Installing the ODBC SDK for OS/2--Beta
+
+*******************************************************
+
+The Visigenic Open Database Connectivity Software 
+Development Kit (ODBC SDK) for OS/2 is a set of software 
+components, tools, and documentation designed to help you 
+develop ODBC drivers and ODBC-enabled applications for 
+the OS/2 operating systems. This chapter describes the 
+Software Development Kit (SDK) components and how to 
+install them. It includes these major sections:
+
+About the ODBC SDK for OS/2	
+
+Samples Programs and the Setup Toolkit Utility	
+
+Hardware and Software Requirements	
+
+Installing the ODBC SDK for OS/2	
+
+
+About the ODBC SDK for OS/2
+============================
+The ODBC interface makes it possible for applications to 
+access data from a variety of database management systems 
+(DBMS's). The ODBC interface permits maximum 
+interoperability--an application can access data in diverse 
+DBMS's through a single interface. Furthermore, that 
+application is independent of any DBMS from which it 
+accesses data. Users of the application can add software 
+components called drivers, which interface between an 
+application and a specific DBMS.
+
+The ODBC SDK contains setup, installation, administration, 
+and ODBC program files. In addition, a set of libraries, 
+include files, help files, utilities, drivers, and sample 
+programs are included. For a complete list of the product 
+components and their filenames, see the file 
+PACKLIST.TXT, which the ODBC SDK Setup program 
+copies to your \ODBC directory.
+
+
+Samples Programs and the Setup Toolkit Utility
+===============================================
+The ODBC SDK includes several sample programs and a 
+Driver Setup Toolkit utility. 
+
+Sample Programs
+
+The ODBC SDK Install program copies the source code files 
+and makefiles for the following sample programs:
+
+o  Quick Test (QUIKTEST)
+o  Sample Application (PROGREF)
+o  Sample Driver (SMPLDRVR)
+
+The program copies these files into subdirectories of the 
+\ODBC\SAMPLES directory. Executable sample files are 
+copied to the \ODBC\BIN directory. 
+
+Quick Test (QUIKTEST)
+=====================
+You can use the Quick Test sample program (located in 
+\ODBC\SAMPLES\QUIKTEST\QUIKTEST.C) as a starting 
+point for writing and executing your own auto tests that test 
+the functionality of your ODBC driver. An auto test contains 
+one or more test cases, each of which tests a specific function 
+of the driver. The Quick Test program calls each ODBC 
+function and verifies that it returns the expected code.
+
+Sample Application (PROGREF)
+============================
+You can use the sample application (located in 
+\ODBC\SAMPLES\PROGREF\PROGREF.C) to test your 
+ODBC-compliant drivers. The sample application makes all 
+the Core, Level 1, and Level 2 API calls to the Driver 
+Manager. The required include files and makefile are also 
+provided. 
+
+Sample Driver (SMPLDVR)
+=======================
+The sample driver (located in 
+\ODBC\SAMPLES\SMPLDRVR\SMPLDRVR.C) shows you 
+how to write an ODBC driver. This C-language template 
+includes a source code template to help you write a driver-
+specific setup DLL that will work with both the ODBC 
+Administrator and the Driver Setup Toolkit utility.
+
+Driver Setup Toolkit Utility
+============================
+The Driver Setup Toolkit provides you with an easy way to 
+include a customized setup program with your ODBC drivers. 
+The toolkit is located in \ODBC\DRVSETUP.KIT\SETUP 
+and is based on the same setup program that installs the 
+drivers included with the Visigenic ODBC DriverSet for 
+OS/2. 
+
+Hardware and Software Requirements
+==================================
+To use the ODBC SDK, you will need the following minimum 
+hardware configuration:
+
+o  A personal computer using the Intel® 80386 (386 DX or 386 SX) 
+   or newer processor and a VGA or higher-resolution graphics card
+o  At least 8 Mb (16 Mb recommended) of random-access memory (RAM)
+o  At least one 3.5-inch (1.44-Mb) or one 5.25-inch (1.2-Mb) disk 
+   drive
+o  Approximately 10 Mb of hard disk space for the complete 
+   installation (including samples) of the SDK (additional disk 
+   space for developing ODBC drivers or applications is also required)
+
+Before installing the SDK, make sure that the following 
+software is already installed on your system or available for 
+use:
+
+o  OS/2 Warp, Version 3.0
+o  OS/2 C Compiler
+
+
+Installing the ODBC SDK for OS/2
+=================================
+The ODBC SDK Setup program (INSTALL) is a 
+straightforward installation program. When Setup runs, it 
+installs the ODBC Administrator program, required ODBC 
+SDK files, as well as the libraries, include files, tools, API 
+help files, and sample programs. 
+
+During the installation, you are prompted for the directory 
+name in which you want the ODBC SDK to reside. The 
+default installation directory is \ODBC. At the end of the 
+installation, a new environment variable, ODBC_PATH, is 
+added to your CONFIG.SYS file and is set to reflect the path 
+to your ODBC root directory.
+
+Note:  ODBC_PATH specifies your ODBC SDK installation 
+directory. The ODBC Administrator uses this path to find the 
+ODBC.INI file--an initialization file used by both the ODBC 
+Driver Manager and ODBC drivers.
+
+The installation program creates (if you have not already 
+installed the Visigenic ODBC DriverSet) or adds files to the 
+following directories in your ODBC root directory:
+
+Directory               Description
+-----------             -----------
+BIN                     Contains the ODBC Administrator program.
+HELP                    Contains the ODBC SDK help files.
+INCLUDE                 Contains the ODBC include files.
+LIB                     Contains the Driver Manager libraries.
+DLL                     Contains the SDK dynamic link libraries.
+DRVSETUP.KIT            Contains the Driver Setup Toolkit utility files.
+SAMPLES                 Contains the sample program directories and files.
+REDIST                  Contains the redistributable SDK files.
+DRIVERS                 Contains the driver files.
+
+Once the ODBC program group and ODBC Administrator are 
+installed, Setup invokes the ODBC Administrator. You use 
+the ODBC Administrator to add and configure data sources 
+for your installed ODBC drivers.
+
+Note:  If you have already installed the DB2 driver, you must copy 
+the ODBC.INI and ODBCINST.INI files from your DB2 root 
+directory to the ODBC root directory specified by 
+ODBCPATH before you install the ODBC SDK for OS/2.
+
+To install the ODBC SDK
+=======================
+1.  Insert the diskette labeled "ODBC SDK for OS/2" in 
+    your diskette drive.
+
+2.  Open an OS/2 Window.	
+
+3.  In the OS/2 Window, type the letter of the driver that 
+    contains the diskette, followed by a colon, and the 
+    word install.
+
+    For example if the A: drive contains the diskette, type the 
+    following:
+      A:INSTALL
+
+    Follow the instructions displayed in the Setup 
+    program's dialog boxes.
+
+4.  Make the appropriate changes to the CONFIG.SYS file.
+
+    After it has copied all the ODBC SDK files to your 
+    system, Setup asks you whether you want to update 
+    the CONFIG.SYS file.
+
+    Click Yes if you want the ODBC installation program 
+    to prepend the ODBC installation path to your PATH 
+    environment variable and add the ODBC_PATH 
+    environment variable to your CONFIG.SYS file.
+
+    Click No if you want to manually add those changes to 
+    the CONFIG.SYS file.
+
+    The setup process is now complete. 
+
+**************************************************************
+
+Chapter 2: Managing Data Sources and Drivers--Beta
+
+**************************************************************
+
+
+
+This chapter explains how to use the ODBC Administrator to 
+add database drivers and data sources. The ODBC SDK 
+Setup program invokes the ODBC Administrator after it has 
+finished copying the essential SDK program files.
+
+About Drivers and Data Sources	
+
+Invoking the ODBC Administrator	
+
+Managing Data Sources	
+
+Managing Drivers	
+
+
+About Drivers and Data Sources
+==============================
+Drivers are the components that process ODBC requests and 
+return data to the application. If necessary, drivers modify an 
+application's request into a form that is understood by the 
+data source. You use the ODBC Administrator to add and 
+delete drivers from your system.
+
+Data sources are the databases or files accessed by a driver. 
+For the drivers shipped with the ODBC SDK, a set of data 
+sources is created upon installation. You use the ODBC 
+Administrator to add, configure, and delete data sources from 
+your system.
+
+
+Invoking the ODBC Administrator
+===============================
+You can open the ODBC Administrator by clicking on the 
+ODBC program group or by typing ODBCADM in an OS/2 
+window.2
+
+To open the ODBC Administrator from the ODBC program 
+group
+
+1.  Open the ODBC program group in the Program 
+    Manager.
+
+2.  Double-click the ODBC icon in the ODBC program 
+    group. 
+
+    The ODBC Administrator will run.
+
+    Once the ODBC Administrator is running, the Data 
+    Sources dialog box appears. 
+
+
+Managing Data Sources
+=====================
+After installing an ODBC driver, you can define one or more 
+data sources for it. The data source name should provide a 
+unique description of the data; for example, Payroll or 
+Accounts Payable. The data sources that are defined for all 
+the currently installed drivers are listed in the Data Sources 
+(Driver) list box in the Data Sources dialog box.
+
+A data source associates a particular ODBC driver with the 
+data you want to access through that driver. For example, you 
+might create a data source to use the ODBC Oracle7 driver to 
+access one or more Oracle7 databases found in a specific 
+directory on your hard disk or a network drive. With the 
+ODBC Administrator, you can add, delete, and configure the 
+data sources you require.
+
+Note:  To add data sources, you must first be able to access an 
+ODBC driver. This means that the ODBC driver must be 
+installed before you can add and modify data sources for that 
+driver.
+
+
+Adding Data Sources
+===================
+You can add multiple data sources, each one associating a 
+driver with some data you want to access using that driver. 
+You need to give each data source a name that uniquely 
+identifies that data source. For example, if you create a data 
+source for an Informix database that contains customer 
+information, you might name the data source "Customers." 
+Applications typically display data source names for users to 
+choose from.
+
+To add a data source
+--------------------
+1.  Invoke the ODBC Administrator. 
+
+2.  Choose the Add button. 
+
+    The Add Data Source dialog box appears.
+
+    The Installed ODBC Drivers list box displays the names 
+    of installed drivers. If the data source you want to add 
+    requires a driver that has not been installed, you will have 
+    to install the driver first. 
+
+3.  From the Installed ODBC Drivers list, select the driver 
+    for the data source to use.
+
+4.  Click OK.
+
+    A driver-specific Setup dialog box—in this example, the 
+    Setup dialog box for the Oracle driver—for the data 
+    source appears.
+
+    Since each driver is different, each data source requires a 
+    slightly different configuration. Because of this, each data 
+    source has a unique Setup dialog box. For detailed 
+    information on the options in a data source Setup dialog 
+    box, choose the Help button in the dialog box.
+
+5.  Enter the required information about the data source, 
+    such as the data source name and user names.
+
+6.  When you have finished configuring the data source, 
+    click OK. 
+
+    The driver-specific Setup dialog box disappears.
+
+7.  To add more data sources, repeat steps 2 through 6.
+
+8.  Click Close to close the ODBC Administrator.
+
+
+To modify a data source
+-----------------------
+1.  Invoke the ODBC Administrator.
+
+    The Data Sources dialog box appears.
+
+2.  In the Data Sources dialog box, select the data source 
+    you want to modify--in this example, the Employees 
+    data source--and then click the Setup button.
+
+    The Visigenic ODBC Oracle Setup dialog box appears. 
+
+    Since each driver is different, each data source requires a 
+    slightly different configuration. Because of this, each data 
+    source has a unique Setup dialog box. For detailed 
+    information on the options in a data source Setup dialog 
+    box, choose the Help button in the dialog box.
+
+3.  Modify the applicable data source fields, and then click 
+    OK. 
+
+    The driver-specific Setup dialog box disappears.
+
+4.  To modify more data sources, repeat steps 2 through 3.
+
+5.  Click Close to close the ODBC Administrator.
+
+To delete data sources
+----------------------
+Select the name of the data source you want to delete from the Data 
+Source dialog box and click Delete.
+
+A message box appears allowing you to confirm that you 
+want to delete the data source:
+
+o  Choose the Yes button to delete the data source.
+
+o  Choose the No button to return to the Data Sources 
+   dialog box without deleting the data source.
+
+
+Setting Tracing Options
+-----------------------
+The ODBC Options dialog box--that you access through the 
+Data Sources dialog box--allows you to configure the way 
+ODBC function calls are traced. 
+
+How Tracing Works
+-----------------
+When you activate tracing from the ODBC Options dialog 
+box, the Driver Manager will log all ODBC function calls for 
+all subsequently run applications. ODBC function calls from 
+applications running before tracing is activated are not 
+logged. Logging is done by writing all ODBC function calls to 
+a log file you specify.
+
+By default, tracing will stop as soon as any application being 
+traced closes. You can choose to have tracing continue after 
+an ODBC application closes. However, keep in mind that 
+while tracing is on, the log file will continue to increase in 
+size, and that the performance of your ODBC applications 
+will be affected.
+
+To enable and disable tracing
+-----------------------------
+1.  Invoke the ODBC Administrator.
+
+2.  Click the Options button. 
+
+    The ODBC Options dialog box appears. 
+
+3.  Check the Trace ODBC Calls box. 
+
+    The Stop Tracing Automatically box is activated.
+
+4.  To disable the automatic stopping of ODBC call 
+    tracing, clear the Stop Tracing Automatically box. 
+
+    Otherwise, the tracing of ODBC calls stops when the first 
+    application that uses tracing is terminated.
+
+    Note:  If you disable automatic stopping of ODBC call tracing, 
+    the log file will continue to increase in size, and the 
+    performance of your ODBC applications will be affected.
+
+    When you clear the Stop Tracing Automatically box, the 
+    Driver Manager prompts you with a message box for 
+    confirmation. Click OK to confirm or Cancel to leave the 
+    Stop Tracing Automatically box selected.
+   
+5.  Click the Select File... Button.
+
+    Type the name of the log file to which you want the Driver 
+    Manager to write the ODBC calls. Or use the drive and 
+    directory boxes to choose an existing log file to which to 
+    append new information.
+
+6.  Click OK. 
+
+    The ODBC Options dialog box closes. Any ODBC 
+    applications that you run after you close the Data Sources 
+    dialog box will have all ODBC function calls appended to 
+    the file you selected.
+
+7.  Click Close to close the Data Source dialog box.
+
+
+
+Managing Drivers
+================
+To configure data sources, you must have at least the ODBC 
+driver for that data source installed on your system--like a 
+driver from the Visigenic ODBC DriverSet for OS/2.
+
+To view installed drivers and driver information
+------------------------------------------------
+1.  Invoke the ODBC Administrator. 
+
+2.  Click the Drivers button. 
+
+    The Drivers dialog box appears.
+
+    The Installed ODBC Drivers list box displays the drivers 
+    installed on your system.
+
+    Note:On OS/2, the Drivers dialog box does not have Add or 
+    Delete buttons. You add drivers through the driver's 
+    installation program.
+
+3.  Click the About button. 
+
+    The About dialog box appears.
+
+    This dialog box displays file and version information for 
+    the selected driver.
+
+4.   Click OK.
+
+     The About dialog box disappears.
+
+5.   Repeat steps 2 through 4 until you have finished 
+     examining installed driver information.
+
+6.   Click Close to close the ODBC Administrator.
+
+
+
+
